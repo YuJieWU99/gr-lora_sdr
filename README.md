@@ -175,7 +175,7 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 	```bash
 	include_directories(/path/to/conda/envs/gr310/include/gnuradio/lora_sdr)
 	```
-	then add 
+	- then add 
 	```bash
 	build/lib/libgnuradio-lora_sdr.so
 	``` 
