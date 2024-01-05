@@ -139,10 +139,10 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 
 - Test Procedure. Follow these steps to run the tests:
 
-    - Open a terminal.
-
-    - Navigate to the build folder you create:
-
+	- Open a terminal.
+	
+	- Navigate to the build folder you create:
+	
 		```bash
 		cd path/to/build/folder
 		```
@@ -186,19 +186,19 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 - Procedure. Follow these steps to run the tests:
 	
     	- To build the code, create build folder in the flow_graph folder generated above and go into it
-  		```sh
+  		```bash
 		mkdir build
 		cd build
 		```
 	- Run the main CMakeLists.txt
-		```sh
+		```bash
 		cmake .. 
 		```
-  		```sh
+  		```bash
 		make 
 		```
 	- Finally run the code
-   		```sh
+   		```bash
 		./flow_graph
 		```
 	  			
