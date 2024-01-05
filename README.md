@@ -161,11 +161,10 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 - You can generate C++ code for flow graph in gnuradio
 
 - Procedure. Follow these steps to generate C++ code for flow_graph.grc
-
-        - Open gnuradio in terminal by typing in 
-		```bash
-		gnuradio-companion &
-		```
+	- Open gnuradio in terminal by typing in 
+	```sh
+	gnuradio-companion &
+	```
         - Open .grc file in folder examples 
         - Change "output language" in "Options" to C++
 	- Change "general options" in "Options" to No GUI
@@ -186,21 +185,21 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 - Procedure. Follow these steps to run the tests.
 	
     	- To build the code, create build folder in the flow_graph folder generated above and go into it
-  		```bash
-		mkdir build
-		cd build
-		```
+	```bash
+	mkdir build
+	cd build
+	```
 	- Run the main CMakeLists.txt
-		```bash
-		cmake .. 
-		```
-  		```bash
-		make 
-		```
+	```bash
+	cmake .. 
+	```
+	```bash
+	make 
+	```
 	- Finally run the code
-   		```bash
-		./flow_graph
-		```
+	```bash
+	./flow_graph
+	```
 	  			
 
 ### From conda
