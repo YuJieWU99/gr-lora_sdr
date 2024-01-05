@@ -137,22 +137,22 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 
 - Prerequisites: Before running the tests, make sure you have build the code and create a build folder according to above.
 
-- Test Procedure. Follow these steps to run the tests:
+- Test Procedure. Follow these steps to run the tests
 
 	- Open a terminal.
 	
-	- Navigate to the build folder you create:
+	- Navigate to the build folder you create
 	
 		```bash
 		cd path/to/build/folder
 		```
 
 	- Run the code below to test all the blocks (except for modulate, frame_sync, header_decoder and crc_verify), LoRa transmitter as well as receiver.
-		- with log:
+		- with log
 		```bash
 		ctest -VV
 		```
-		- without log:
+		- without log
 		```bash
 		make test
 		```
@@ -160,7 +160,7 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 
 - You can generate C++ code for flow graph in gnuradio
 
-- Procedure. Follow these steps to generate C++ code for flow_graph.grc:
+- Procedure. Follow these steps to generate C++ code for flow_graph.grc
 
         - Open gnuradio in terminal by typing in 
 		```bash
