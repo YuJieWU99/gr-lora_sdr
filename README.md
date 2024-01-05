@@ -165,6 +165,10 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 		```bash
 		gnuradio-companion &
 		```
+        - Now you should be able to run some codes. For example, open the GNU Radio Companion user interface and check if the blocks of gr-lora_sdr are available on the blocks list (e.g. under LoRa_TX).
+		```sh
+		gnuradio-companion &
+		```
   
         - Open .grc file in folder examples 
         - Change "output language" in "Options" to C++
@@ -185,15 +189,16 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 #### Run C++ code for flow graph in terminal 
 - Procedure. Follow these steps to run the tests
 	
-    	- To build the code, create build folder in the flow_graph folder generated above and go into it
-		```bash
-		mkdir build
-		cd build
-		```
+
 	- Run the main CMakeLists.txt
 		```bash
 		cmake ..
   		make
+		```
+      	- To build the code, create build folder in the flow_graph folder generated above and go into it
+		```bash
+		mkdir build
+		cd build
 		```
 	- Finally run the code
 		```bash
