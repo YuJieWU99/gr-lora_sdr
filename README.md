@@ -185,18 +185,18 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 
 #### Run C++ code for flow graph in terminal 
 - Procedure. Follow these steps to run the tests
-	- Open gnuradio in terminal by typing in
+	- To build the code, create build folder in the flow_graph folder generated above and go into it
+   		```bash
+		mkdir build
+		cd build
+		```
 
 	- Run the main CMakeLists.txt
 		```bash
 		cmake ..
   		make
 		```
-      	- To build the code, create build folder in the flow_graph folder generated above and go into it
-		```bash
-		mkdir build
-		cd build
-		```
+
 	- Finally run the code
 		```bash
 		./flow_graph
