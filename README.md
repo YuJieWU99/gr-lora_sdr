@@ -141,13 +141,13 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 
     - Open a terminal.
 
-    - Navigate to the build folder you build-:
+    - Navigate to the build folder you create:
 
 		```bash
 		cd path/to/build/folder
 		```
 
-	- Run the code below to test all the blocks (except for modulate, frame_sync, header_decoder and crc_verify) and LoRa transmitter as well as receiver.
+	- Run the code below to test all the blocks (except for modulate, frame_sync, header_decoder and crc_verify), LoRa transmitter as well as receiver.
 		- with log:
 		```bash
 		ctest -VV
@@ -158,40 +158,39 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 		```
 #### Generate C++ code for flow graph
 
-- You can generate C++ code from python by using gnuradio
+- You can generate C++ code for flow graph in gnuradio
 
 - Procedure. Follow these steps to run the tests:
 
-    - Open gnuradio in terminal by typing in 
+        - Open gnuradio in terminal by typing in 
 		```bash
 		gnuradio-companion &
 		```
-    - Add .grc file and make sure it could generate the flowgraph
-    - Change "output language" in "Options" to C++
+        - Open .grc file in folder examples 
+        - Change "output language" in "Options" to C++
 	- Change "general options" in "Options" to No GUI
 	- Press run
-	- Go to the folder where there is your flow_graph.grc and you could see a newly generated folder named the same as flow_graph.grc
-	- Create a CMakeLists.txt and add 
+	- Go to the folder where there is your flow_graph.grc and you could see a newly generated folder named as flow_graph
+   	- How to create CMakeLists.txt?
+	- In CMakeLists.txt add 
 	```bash
 	include_directories(/path/to/conda/envs/gr310/include/gnuradio/lora_sdr)
 	```
-	- then add 
+	- In target_link_libraries add 
 	```bash
 	build/lib/libgnuradio-lora_sdr.so
 	``` 
-	under target_link_libraries
 
 #### Run C++ code for flow graph in terminal 
 - Procedure. Follow these steps to run the tests:
 	
-    - Open gnuradio in terminal by typing in 
-		```bash
-		gnuradio-companion &
+    	- To build the code, create build folder in the flow_graph folder generated above and go into it
+  		```sh
+		mkdir build
+		cd build
 		```
-    - Add custom blocks and make sure it could generate the flowgraph
-    - Change "output language" in "Options" to C++
-	- Change "general options" in "Options" to No GUI
-	- Press run
+  	- 
+  			
 
 ### From conda
 Thanks to Ryan Volz this OOT module can also directly be installed as a Conda package. Note that gnuradio will also be installed in the conda environment.
