@@ -160,7 +160,7 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 
 - You can generate C++ code for flow graph in gnuradio
 
-- Procedure. Follow these steps to run the tests:
+- Procedure. Follow these steps to generate C++ code for flow_graph.grc:
 
         - Open gnuradio in terminal by typing in 
 		```bash
@@ -170,16 +170,17 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
         - Change "output language" in "Options" to C++
 	- Change "general options" in "Options" to No GUI
 	- Press run
-	- Go to the folder where there is your flow_graph.grc and you could see a newly generated folder named as flow_graph
-   	- How to create CMakeLists.txt?
-	- In CMakeLists.txt add 
-	```bash
-	include_directories(/path/to/conda/envs/gr310/include/gnuradio/lora_sdr)
-	```
-	- In target_link_libraries add 
-	```bash
-	build/lib/libgnuradio-lora_sdr.so
-	``` 
+	- Go to the folder where there is your flow_graph.grc and you could see a newly generated folder named as flow_graph. In flow_graph, you could see flow_graph.cpp
+   	- Go into the folder flow_graph
+   	- Create CMakeLists.txt file and specify the libraries in CMakeLists.txt
+		- In CMakeLists.txt add 
+		```bash
+		include_directories(/path/to/conda/envs/gr310/include/gnuradio/lora_sdr)
+		```
+		- In target_link_libraries add 
+		```bash
+		/path/to/build/lib/libgnuradio-lora_sdr.so
+		``` 
 
 #### Run C++ code for flow graph in terminal 
 - Procedure. Follow these steps to run the tests:
@@ -189,8 +190,18 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 		mkdir build
 		cd build
 		```
-  	- 
-  			
+	- Run the main CMakeLists.txt
+		```sh
+		cmake .. 
+		```
+  		```sh
+		make 
+		```
+	- Finally run the code
+   		```sh
+		./flow_graph
+		```
+	  			
 
 ### From conda
 Thanks to Ryan Volz this OOT module can also directly be installed as a Conda package. Note that gnuradio will also be installed in the conda environment.
