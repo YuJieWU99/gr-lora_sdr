@@ -149,13 +149,13 @@ The out of tree module gr-lora_sdr can be installed from source or directly as a
 
 	- Run the code below to test all the blocks (except for modulate, frame_sync, header_decoder and crc_verify), LoRa transmitter as well as receiver.
 		- with log
-		```sh
-		ctest -VV
-		```
+			```sh
+			ctest -VV
+			```
 		- without log
-		```sh
-		make test
-		```
+			```sh
+			make test
+			```
 #### Generate C++ code for flow graph
 
 - You can generate C++ code for flow graph in gnuradio. Follow these steps to generate C++ code for flow_graph.grc.
